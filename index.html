@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Northumbria London</title>
+  <link rel="stylesheet" href="output.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body class="overflow-x-hidden bg-white">
+ <!-- Top Info Bar (scrolls normally) -->
+<section class="hidden md:flex items-stretch justify-between px-8  lg:px-20 ">
+  <!-- Left group: Phone number -->
+  <h3 class="text-gray-800 font-medium py-1">+44 (0) 20 8023 7590</h3>
+
+  <!-- Right group -->
+  <div class="flex items-center space-x-6">
+    <!-- Accessibility -->
+    <div class="flex items-center space-x-3 py-1">
+      <img src="/src/images/accessability.JPG" alt="Accessibility icon" class="h-8 w-8 object-contain" />
+      <a href="#" class="text-base font-medium text-gray-700 hover:underline">Accessibility Tools</a>
+    </div>
+
+    <!-- Search and Button -->
+    <div class="flex items-stretch h-full">
+      <!-- Search Bar -->
+      <div class="flex items-center bg-black text-white px-3 w-64">
+        <input
+          type="text"
+          placeholder="Search..."
+          class="outline-none flex-1 text-sm bg-black placeholder-gray-400"
+        />
+        <i class="fa-solid fa-search text-gray-400"></i>
+      </div>
+
+      <!-- Northumbria Button -->
+      <button
+        class="bg-gray-400 text-black font-bold px-4 hover:bg-black hover:text-white transition -ml-px"
+      >
+        Go to northumbria.ac.uk
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Sticky Header / Navigation -->
+<header class="sticky top-0 bg-black text-white px-25 pt-6 flex flex-col z-50">
+  <!-- Logo + Hamburger -->
+  <div class="flex items-center justify-between w-full">
+    <a href="#">
+      <img src="/src/images/logo.png" alt="Northumbria logo" class="w-70" />
+    </a>
+    <button id="menuToggle" class="text-2xl focus:outline-none md:hidden">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- Desktop Navigation -->
+<nav class="hidden md:flex mt-2 w-full">
+  <div class="flex space-x-4 text-base font-medium px-7 pt-2 gap-4">
+    <a href="#" class="px-4 pt-2 pb-2 text-white hover:bg-gray-300 hover:text-black transition">Study</a>
+    <a href="#" class="px-4 pt-2 pb-2 text-white hover:bg-gray-300 hover:text-black transition">International</a>
+    <a href="#" class="px-4 pt-2 pb-2 text-white hover:bg-gray-300 hover:text-black transition">How to Apply</a>
+    <a href="#" class="px-4 pt-2 pb-2 text-white hover:bg-gray-300 hover:text-black transition">Student Life</a>
+    <a href="#" class="px-4 pt-2 pb-2 text-white hover:bg-gray-300 hover:text-black transition">About Us</a>
+    <a href="#" class="px-4 pt-2 pb-2 text-white hover:bg-gray-300 hover:text-black transition">Enquire Now</a>
+    <a href="#" class="px-4 pt-2 pb-2 text-white hover:bg-gray-300 hover:text-black transition">2025/26 Prospectus</a>
+  </div>
+</nav>
+
+<div id="mobileQuickLinks" class="flex md:hidden w-full gap-0 m-0 pt-2 pb-0 -mx-6">
+  <a href="#" class="flex-1 text-center whitespace-nowrap text-white py-2 text-xs hover:bg-gray-300 hover:text-black transition">
+    Courses
+  </a>
+  <a href="#" class="flex-1 text-center whitespace-nowrap text-white py-2 text-xs hover:bg-gray-300 hover:text-black transition">
+    Your Prospectus
+  </a>
+  <a href="#" class="flex-1 text-center whitespace-nowrap text-white py-2 text-xs hover:bg-gray-300 hover:text-black transition">
+    Enquire Now
+  </a>
+</div>
+
+
+
+
+
+
+</header>
+
+
+
+
+  <!-- MAIN HEADER -->
+  
+
+  <!-- FULLSCREEN MOBILE MENU -->
+  <div
+    id="mobileMenu"
+    class="hidden fixed inset-0 bg-black bg-opacity-95 flex flex-col items-center justify-center space-y-6 text-white text-lg z-40 transition-all duration-300 ease-in-out"
+  >
+    <a href="#" class="px-6 py-3 hover:text-gray-400">Study</a>
+    <a href="#" class="px-6 py-3 hover:text-gray-400">International</a>
+    <a href="#" class="px-6 py-3 hover:text-gray-400">How to Apply</a>
+    <a href="#" class="px-6 py-3 hover:text-gray-400">Student Life</a>
+    <a href="#" class="px-6 py-3 hover:text-gray-400">About Us</a>
+    <a href="#" class="px-6 py-3 hover:text-gray-400">Enquire Now</a>
+    <a href="#" class="px-6 py-3 hover:text-gray-400">2025/26 Prospectus</a>
+  </div>
+
+  <!-- HERO VIDEO SECTION -->
+  <section class="relative">
+    <video 
+      id="heroVideo"
+      src="/src/video/hero_video.mp4"
+      autoplay
+      muted
+      loop
+      playsinline
+      class="w-full h-[80vh] object-cover"
+    ></video>
+
+    <!-- Play/Pause Button -->
+    <button
+      id="videoControl"
+      class="absolute bottom-5 right-5 bg-black/70 text-white p-3 rounded-full flex items-center justify-center text-lg hover:bg-black transition"
+    >
+      <i class="fa-solid fa-pause"></i>
+    </button>
+  </section>
+
+  <!-- CALL TO ACTION SECTION -->
+  <section class="bg-black text-2xl text-white font-bold flex justify-center items-center space-x-6 py-5">
+    <button class="border border-white text-white px-6 py-3  hover:bg-white hover:text-black transition">
+      Find Your Course
+    </button>
+    <button class="border border-white text-white px-6 py-3  hover:bg-white hover:text-black transition">
+      Enquire Now
+    </button>
+  </section>
+
+
+<section class="text-center px-6 md:px-40 py-16 max-w-5xl mx-auto">
+  <h2 class="font-bold text-2xl md:text-3xl mb-6">
+    Welcome to the Northumbria University <br>London Campus
+  </h2>
+
+  <p class="mb-4 font-bold md:font-semibold text-base md:text-lg leading-relaxed">
+    Whether you are looking for a full-time or part-time programme, choose from a range of Business,
+    Computing, Cyber, Project Management and Technology focused programmes at our London Campus.
+  </p>
+
+  <div id="extraText" class="hidden md:block text-base md:text-lg text-black leading-relaxed">
+    <p class="font-semibold">
+      Ideally situated just minutes away from Liverpool Street station, benefit from studying
+      in a location where the financial district meets the heart of London’s digital and technology sector.
+      This offers you an excellent base from which to take full advantage of all that studying in
+      one of the world’s leading cities has to offer, including work experience
+      and networking opportunities.
+    </p>
+  </div>
+
+  <button
+    id="readMoreBtn"
+    class="block md:hidden mx-auto mt-4 uppercase font-bold no-underline bg-transparent text-black"
+    aria-expanded="false"
+  >
+    READ MORE
+  </button>
+</section>
+
+
+<section class="py-10 px-6 md:px-20">
+  <div class="flex flex-col md:flex-row justify-center items-stretch gap-6 max-w-7xl mx-auto">
+
+    <!-- LEFT COLUMN -->
+    <div class="flex flex-col w-full md:w-1/2 gap-6">
+
+      <!-- Courses -->
+      <div class="relative group overflow-hidden h-96">
+        <img 
+          src="/src/images/courses.jpg" 
+          alt="Courses" 
+          class="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
+        >
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6">
+          <h3 class="text-3xl font-bold mb-2 drop-shadow-lg">Courses</h3>
+          <p class="hidden md:block opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-lg font-semibold">
+            Northumbria's University London campus offers industry-focused Business,
+            Computing, IT and Project Management Courses amid the buzz of London's
+            business and financial district.
+          </p>
+        </div>
+      </div>
+
+      <!-- Video -->
+      <div class="overflow-hidden h-[32rem]">
+        <iframe
+          class="w-full h-full object-cover"
+          src="https://www.youtube.com/embed/k65ieITnt5A"
+          title="Campus Life Video"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <!-- Row: I am Northumbria + Student Budget Calculator -->
+      <div class="flex flex-col md:flex-row gap-6">
+        <!-- I am Northumbria -->
+        <div class="relative group overflow-hidden w-full md:w-1/2 h-96">
+          <img 
+            src="/src/images/I_am_northumbria.jpg" 
+            alt="I am Northumbria" 
+            class="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
+          >
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6">
+            <h3 class="text-2xl font-bold mb-2 drop-shadow-lg">I am Northumbria</h3>
+            <p class="hidden md:block opacity-0 group-hover:opacity-100 transition-opacity duration-500 font-semibold">
+              Gateway to your Northumbria Experience — prep for University, Induction, FAQs, Finance and more.
+            </p>
+          </div>
+        </div>
+
+        <!-- Student Budget Calculator -->
+        <div class="relative group overflow-hidden w-full md:w-1/2 h-96">
+          <img 
+            src="/src/images/Student_budget_calculator.jpg" 
+            alt="Student Budget Calculator" 
+            class="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
+          >
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6">
+            <h3 class="text-2xl font-bold mb-2 drop-shadow-lg">Student Budget Calculator</h3>
+            <p class="hidden md:block opacity-0 group-hover:opacity-100 transition-opacity duration-500 font-semibold">
+              Use our free tool to understand where your money goes and make better financial decisions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="flex flex-col w-full md:w-1/2 gap-6">
+
+      <!-- Row 1: International + Study Levels -->
+      <div class="flex flex-col md:flex-row gap-6">
+        <!-- International Students -->
+        <div class="relative group overflow-hidden w-full md:w-1/2 h-96">
+          <img 
+            src="/src/images/international_students.jpg" 
+            alt="International Students" 
+            class="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
+          >
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6">
+            <h3 class="text-2xl font-bold mb-2 drop-shadow-lg">International Students</h3>
+            <p class="hidden md:block opacity-0 group-hover:opacity-100 transition-opacity duration-500 font-semibold">
+              We aim to make your transition to the UK easy with full student support for all your needs.
+            </p>
+          </div>
+        </div>
+
+        <!-- Study Levels -->
+        <div class="relative group overflow-hidden w-full md:w-1/2 h-96">
+          <img 
+            src="/src/images/study_levels.jpg" 
+            alt="Study Levels" 
+            class="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
+          >
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6">
+            <h3 class="text-2xl font-bold mb-2 drop-shadow-lg">Study Levels</h3>
+            <p class="hidden md:block opacity-0 group-hover:opacity-100 transition-opacity duration-500 font-semibold">
+              Explore Postgraduate, Undergraduate (Top-up), and Pre-Masters programmes built to help you reach your goals.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dates and Fees (same height as video) -->
+      <div class="relative group overflow-hidden w-full h-[32rem]">
+        <img 
+          src="/src/images/dates_and_fees.jpg" 
+          alt="Dates and Fees" 
+          class="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
+        >
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6">
+          <h3 class="text-3xl font-bold mb-2 drop-shadow-lg">Dates and Fees</h3>
+          <p class="hidden md:block opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-lg font-semibold">
+            Learn about our range of scholarships, bursaries and payment plans to support you through your studies.
+          </p>
+        </div>
+      </div>
+
+      <!-- Row 3: Prospectus + Discover More -->
+      <div class="flex flex-col md:flex-row gap-6">
+        <!-- Your Prospectus -->
+        <div class="relative group overflow-hidden w-full md:w-1/2 h-96">
+          <img 
+            src="/src/images/your_prospectus.jpg" 
+            alt="Your Prospectus" 
+            class="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
+          >
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6">
+            <h3 class="text-2xl font-bold mb-2 drop-shadow-lg">Your Prospectus</h3>
+            <p class="hidden md:block opacity-0 group-hover:opacity-100 transition-opacity duration-500 font-semibold">
+              Create your own personalised prospectus and choose only the info you want to know more about.
+            </p>
+          </div>
+        </div>
+
+        <!-- Discover More -->
+        <!-- Discover More -->
+<div class="flex flex-col justify-center items-start w-full md:w-1/2 h-96 bg-black text-left p-8">
+  <h3 class="text-2xl font-bold mb-4 text-white">Discover More</h3>
+  <div class="flex flex-col gap-2 text-white font-semibold">
+    <a href="#" class="hover:underline">Why Northumbria?</a>
+    <a href="#" class="hover:underline">Postgraduate Loans (UK)</a>
+    <a href="#" class="hover:underline">Our Campus</a>
+    <a href="#" class="hover:underline">Student Support</a>
+    <a href="#" class="hover:underline">Student Guide</a>
+    <a href="#" class="hover:underline">On-Demand Webinars</a>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-black text-white">
+
+  <!-- Logo + Socials -->
+  <section class="flex py-10 justify-between px-8 md:px-36 border-b border-white/20">
+    <img src="/src/images/logo.png" alt="" class="w-48 md:w-60">
+
+    <div class="flex space-x-4 text-2xl">
+      <a href="#" class="hover:scale-125 transition duration-200"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="hover:scale-125 transition duration-200"><i class="fab fa-x-twitter"></i></a>
+      <a href="#" class="hover:scale-125 transition duration-200"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="hover:scale-125 transition duration-200"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" class="hover:scale-125 transition duration-200"><i class="fab fa-youtube"></i></a>
+    </div>
+  </section>
+
+  <!-- Main Links -->
+  <section class="flex flex-col md:flex-row gap-10 justify-between px-8 md:px-36 py-8 border-b border-white/20">
+
+    <!-- Study Links -->
+    <div>
+      <ul class="space-y-2">
+        <li><h2 class="font-semibold text-lg">Study</h2></li>
+        <li><a href="">Undergraduate study</a></li>
+        <li><a href="">Postgraduate study</a></li>
+        <li><a href="">Studying in London</a></li>
+        <li><a href="">Pre-arrival information</a></li>
+        <li><a href="">Scholarships and bursaries</a></li>
+        <li><a href="">International students</a></li>
+      </ul>
+    </div>
+
+    <!-- Divider for mobile -->
+    <div class="border-b border-white/20 md:hidden my-4 w-full"></div>
+
+    <!-- Useful Links -->
+    <div>
+      <ul class="space-y-2">
+        <li><h2 class="font-semibold text-lg">Useful links</h2></li>
+        <li><a href="">Student portal</a></li>
+        <li><a href="">Contact us</a></li>
+        <li><a href="">For businesses</a></li>
+        <li><a href="">How to pay your fees</a></li>
+        <li><a href="">Online shop</a></li>
+        <li><a href="">Our London campus partner</a></li>
+      </ul>
+    </div>
+
+  </section>
+
+  <!-- Bottom Links Section -->
+  <section class="pt-5 flex flex-col gap-4 pb-10">
+
+    <div class="flex justify-center gap-6 text-sm">
+      <a href="" class="hover:underline">Accessibility statement</a>
+      <a href="" class="hover:underline">Cookie notice</a>
+      <a href="" class="hover:underline">Privacy notice</a>
+    </div>
+
+    <div class="flex justify-center gap-6 text-sm">
+      <a href="" class="hover:underline">Disclaimer</a>
+      <a href="" class="hover:underline">Policies & Procedure</a>
+      <a href="" class="hover:underline">Student conduct</a>
+      <a href="" class="hover:underline">Terms and Conditions</a>
+    </div>
+
+  </section>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- SCRIPT -->
+  <script>
+  // 🎥 Video control
+  const video = document.getElementById('heroVideo');
+  const videoBtn = document.getElementById('videoControl');
+  const videoIcon = videoBtn.querySelector('i');
+
+  videoBtn.addEventListener('click', () => {
+    if (video.paused) {
+      video.play();
+      videoIcon.classList.replace('fa-play', 'fa-pause');
+    } else {
+      video.pause();
+      videoIcon.classList.replace('fa-pause', 'fa-play');
+    }
+  });
+
+  // 🍔 Hamburger toggle
+  const toggle = document.getElementById('menuToggle');
+  const menu = document.getElementById('mobileMenu');
+  const quickLinks = document.getElementById('mobileQuickLinks');
+  const menuIcon = toggle.querySelector('i');
+
+  toggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+    menuIcon.classList.toggle('fa-bars');
+    menuIcon.classList.toggle('fa-xmark');
+
+    // Hide quick links when menu is open
+    if (!menu.classList.contains('hidden')) {
+      quickLinks.classList.add('opacity-0', 'pointer-events-none');
+    } else {
+      quickLinks.classList.remove('opacity-0', 'pointer-events-none');
+    }
+  });
+
+  // 📖 READ MORE toggle
+  const readMoreBtn = document.getElementById('readMoreBtn');
+  const extraText = document.getElementById('extraText');
+  let expanded = false;
+
+  readMoreBtn.addEventListener('click', () => {
+    expanded = !expanded;
+    extraText.classList.toggle('hidden');
+    readMoreBtn.textContent = expanded ? 'READ LESS' : 'READ MORE';
+  });
+</script>
+
+
+</body>
+</html>
